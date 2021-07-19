@@ -1,0 +1,43 @@
+@mixin flex($direction,$align-item,$j-content) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-item;
+    justify-content: $j-content;
+}
+
+
+@mixin trans($time) {
+    transition: $time ease-in-out;
+}
+
+@mixin max($max-width){
+    @media screen and (max-width:$max-width) {
+        @content;
+    }
+}
+
+@mixin min($min-width){
+    @media screen and (min-width:$min-width) {
+        @content;
+    }
+}
+
+
+// @mixin responsive($size) {
+//     $breakPoint : map.get($breakPoints, $size);
+//     @media screen and (max-width : $breakPoint) {
+//         @content    
+//     }
+// };
+
+
+
+%flex{
+    display: flex
+}
+
+
+
+@function rem($px){
+    @return ($px / 16) * 1rem;
+}

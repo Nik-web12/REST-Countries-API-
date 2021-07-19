@@ -1,0 +1,127 @@
+
+.search{
+    transition: 0.2s ease;
+    background: $VeryLightGray;
+    &__content{
+        @extend %flex;
+        flex-wrap: wrap;
+        // align-items: center;
+        justify-content: space-between;
+        padding: rem(47) 0;
+        .search__box{
+            position: relative;
+            width: 100%;
+            border-radius: 5px;
+            max-width: 480px;
+            margin-left: rem(-2);
+            margin-right: rem(20);
+            input{
+                padding: rem(19) 0;
+                padding-left: rem(72);
+                font-size: rem(14);
+                font-family: inherit;
+                border: none;
+                outline: none;
+                box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.041);
+                border-radius: 5px;
+                @include max(600px){
+                    font-size: rem(13);
+                    padding: rem(17) 0;
+                    padding-left: rem(60);
+                }
+            }
+            @include max(734px){
+                margin-bottom: rem(30);
+                margin-right: 0;
+                max-width: 100%;
+            }
+        }
+        .search-icon{
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            font-size: rem(25.5);
+            color: $DarkGray;
+            @include max(600px){
+                top: 16px;
+                left: 21px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__dropdown{
+        cursor: pointer;
+        position: relative;
+        .dropdown{
+            position: relative;
+            background: $White;
+            @extend %flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.041);
+            border-radius: 4px;
+            padding: rem(14) rem(20);
+            min-width: 12.2rem;             
+            @include max(600px){
+                padding: rem(12) rem(20);
+                min-width: 11rem;
+            }
+            @include max(768px){
+                cursor: none;
+            }
+            p{
+                font-size: 14px;
+                @include max(600px){
+                    font-size: rem(13);
+                }
+            }
+        }
+        .down{
+            font-size: rem(26);
+            transition: 0.2s ease-in-out;
+            @include max(600px){
+                font-size: 21px;
+            }
+        }
+        .rotate{
+            transform: rotate(180deg);
+        }
+        .dropdown-content{
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: 0.3s ease-in-out;
+            position: absolute;
+            top: 62px;
+            padding: rem(12) rem(22);
+            background: $White;
+            min-width: 100%;
+            box-shadow: 0px 0px 2px 2px rgba(110, 109, 109, 0.096);
+            border-radius: 4px;
+            @include max(768px){
+                cursor: none;
+            }
+            p{
+                font-weight: 400;
+            }
+            ul{
+                li{
+                    position: relative;
+                    padding: 5.3px 0px;
+                    @include max(600px){
+                        font-size: 13px;
+                    }
+                    &:hover{
+                        color: rgba(0, 0, 0, 0.473);
+                    }
+                }
+            }
+        }
+        .dropdown-content-show{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}

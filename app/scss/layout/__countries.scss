@@ -1,0 +1,159 @@
+.countries{
+    transition: 0.2s ease;
+    background: $VeryLightGray;
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; 
+        @include max(1200px){
+            justify-content: space-around;
+        }
+    }
+    .card-content{
+        cursor: pointer;
+        background: $White;
+        max-width: 260px;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-bottom: rem(72);
+        box-shadow: 0px 0px 2px 2px rgba(110, 109, 109, 0.205);
+        transition: 0.3s;
+        @include max(1200px){
+            margin-left: rem(10);
+            margin-right: rem(10);
+        }
+        &:hover{
+            transform: scale(1.03);
+        }
+        .card-text{
+            padding: 0px rem(21);
+            padding-top: rem(10);
+            padding-bottom: rem(38);
+            .C-name{
+                font-weight: 800;
+                font-size: rem(18);
+                padding-bottom: rem(10);
+            }
+            p{
+                font-size: rem(14);
+                padding: rem(3) 0;
+                strong{
+                    margin-right: rem(3.2);
+                }
+            }
+        }
+    }
+}
+// ********************************************************************** \\
+
+
+.countries-details{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 100;
+    background: $VeryLightGray;
+    padding-top: rem(156);
+    visibility: hidden;
+    // transition: 0.3s ease-in;
+    @include max(900px){
+        padding-top: rem(120);
+        padding-bottom: rem(40);
+    }
+    .back{
+        .back-btn{
+            cursor: pointer;
+            background: $White;
+            border: none;
+            border-radius: 4px;
+            padding: rem(13) rem(45);
+            margin-bottom: rem(75);
+            font-size: rem(15);
+            box-shadow: 0px 0px 2px 2px rgba(110, 109, 109, 0.096);
+            transition: 0.3s ease-in-out;
+            @include max(720px){
+                margin-bottom: rem(30);
+            }
+            .back-arrow{
+                position: relative;
+                top: 4px;
+                right: 18px;
+            }
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+    }
+    .details{
+        .content{
+            display: flex;
+            padding-bottom: rem(35);
+            @include max(900px){
+                flex-wrap: wrap;
+            }
+        }
+        .flag{
+            max-width: 450px;
+            img{
+                height: 300px;
+                width: 100%;
+                object-fit: contain;
+                // box-shadow: 0px 0px 1px 1px rgba(51, 51, 51, 0.322);
+                border-radius: 5px;
+                @include max(900px){
+                    height: auto;
+                }       
+            }
+        }
+        .details-text{
+            margin-top: rem(10);
+            margin-left: rem(60);      
+            @include max(1145px){
+                margin-top: 0;
+            }
+            @include max(900px){
+                margin-top: rem(30);
+                margin-left: 0;
+            }
+            h2{
+                font-size: rem(31);
+                padding-bottom: rem(32);
+            }
+            .text{
+                display: flex;
+                flex-wrap: wrap;
+                .text-1{
+                    margin-right: rem(70);
+                }
+                .text-2{
+                    margin-left: 0;
+                }
+                p{
+                    padding-bottom: rem(11);
+                }
+            }
+            .borders{
+                margin-top: rem(67);
+                padding-bottom: rem(20);
+                white-space: normal;
+                @include max(1145px){
+                    margin-top: rem(30);
+                }
+            }
+        }
+        .border-btn{
+            margin: 10px 13px;
+            box-shadow: 1px 1px 3px rgba(36, 35, 35, 0.562);
+            padding : 6px 15px;
+            font-weight: 400;
+            cursor: pointer;
+            font-family: inherit;
+            border-radius: 2px;
+        }
+    }    
+}
+
+

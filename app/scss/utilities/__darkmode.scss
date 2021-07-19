@@ -1,0 +1,88 @@
+
+.dark-mode{
+    background: $VeryDarkBlue;
+    .header{
+        background: $DarkBlue;
+        color: $White;
+        a{
+            h1{
+                color: $White;
+            }
+        }
+    }
+    .search{
+        background: $VeryDarkBlue;
+        input{
+            background: $DarkBlue;
+            color: $White;
+            &::placeholder{
+                color: $White;
+            }
+        }
+        .search-icon{
+            color: $White;
+        }
+        .dropdown{
+            background: $DarkBlue;
+            color: #FFF;
+            border-radius: 4px;
+            &:hover{
+                box-shadow: none;
+            }
+        }
+        .dropdown-content-show{
+            background: $DarkBlue;
+            color: white;
+            ul{
+                li{
+                    &:hover{
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+    .countries{
+        background: $VeryDarkBlue;
+        .card-content{
+            background: $DarkBlue;
+            .card-text{
+                color: $White;
+            }
+        }
+    }
+
+    .countries-details{
+        background: $VeryDarkBlue;
+        color: $White;
+        .back{
+            .back-btn{
+                background: $DarkBlue;
+                color: $White;
+            }
+        }
+        .border-btn{
+            color: $White;
+            background: $DarkBlue;
+        }
+    }
+    
+.loading{
+    background: $VeryDarkBlue;
+    &__content{
+        .rot{
+            height: 12rem;
+            width: 12rem;
+            border-right: 0.2rem solid #fff;
+        }
+    }
+    span{
+        color: #fff;
+    }
+}
+
+}
+
+.header-bg{
+    background: $DarkBlue;
+}

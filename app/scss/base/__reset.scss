@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsl(0, 0%, 98%);
+    font-family: 'Nunito Sans', sans-serif;
+    min-height: 100.1vh;
+}
+
+a,
+a:hover,
+a:visited{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: var(--Input);
+    &::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+    }
+}
+
+button{
+    outline: none;
+    border: none;
+    background: #fff;
+}
