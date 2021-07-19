@@ -33,7 +33,7 @@ const getCountries = async () =>{
     const res = await fetch('https://restcountries.eu/rest/v2/all')
     const allCountries = await res.json();
     displayCountries(allCountries);
-    console.log(allCountries);
+//     console.log(allCountries);
 }
 const loading = document.querySelector('.loading');
 setTimeout(()=>{
@@ -153,7 +153,7 @@ const searchCountries = document.querySelector('#search-countries');
 
 searchCountries.addEventListener('input',(i)=>{
     const val = i.target.value;
-    console.log(val);
+//     console.log(val);
     const countryName = document.querySelectorAll('.C-name')
     countryName.forEach(name =>{
         console.log(name.innerText)
