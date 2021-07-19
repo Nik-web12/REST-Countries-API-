@@ -156,7 +156,7 @@ searchCountries.addEventListener('input',(i)=>{
 //     console.log(val);
     const countryName = document.querySelectorAll('.C-name')
     countryName.forEach(name =>{
-        console.log(name.innerText)
+//         console.log(name.innerText)
         if(name.innerText.toLowerCase().includes(val.toLowerCase())){
             name.parentElement.parentElement.style.display = 'block'
         }
