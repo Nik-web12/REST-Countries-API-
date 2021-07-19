@@ -39,10 +39,10 @@ const loading = document.querySelector('.loading');
 setTimeout(()=>{
     setTimeout(()=>{
         loading.classList.add('load')
-    },2700)
+    },3500)
     setTimeout(()=>{
         getCountries();
-    },3000)
+    },3600)
 })
 
 const displayCountries = (allCountries) =>{
